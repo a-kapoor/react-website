@@ -14,7 +14,7 @@ export default function BlogIndex() {
     // let blogs = [];
 
     React.useEffect(() => {
-        fetch("http://localhost:3300/blogs")
+        fetch("http://localhost:3300/api/blogs")
             .then(res => res.json())
             .then(
                 (result) => {
