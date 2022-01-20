@@ -1,4 +1,4 @@
-import { CopyBlock } from "react-code-blocks";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 export default function MyCodeComponent(props) {
     return (
@@ -7,7 +7,7 @@ export default function MyCodeComponent(props) {
             language={props.data.language}
             showLineNumbers={props.data.showLineNumbers}
             startingLineNumber={props.data.startingLineNumber}
-            theme={props.data.theme}
+            theme={props.data.theme === 'dracula' ? dracula : dracula}
             wrapLines
         />
     );

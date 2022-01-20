@@ -8,7 +8,6 @@ import { StackContext } from '../../StackContext';
 import React from 'react';
 import Breadcrumb from '../../breadcrumb/Breadcrumb';
 import MyCodeBlock from '../../my-code-block/MyCodeBlock';
-import { dracula } from "react-code-blocks";
 
 export default function BlogItem() {
     let location = useLocation();
@@ -42,7 +41,7 @@ export default function BlogItem() {
                     language: 'text',
                     showLineNumbers: true,
                     startingLineNumber: 1,
-                    theme: dracula
+                    theme: 'dracula'
                 }
             }, {
                 "type": "text",
