@@ -13,8 +13,11 @@ export default function BlogIndex() {
     const [blogs, setBlogs] = useState([]);
     // let blogs = [];
 
+    const baseUrl = (process.env.NODE_ENV === 'production') ? process.env.REACT_APP_BASE_API_SERVER :
+        process.env.REACT_APP_BASE_API_LOCAL;
+
     React.useEffect(() => {
-        fetch("https://localhost:3300/api/blogs")
+        fetch(`${baseUrl}/api/blogs`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -35,12 +38,15 @@ export default function BlogIndex() {
 
     const renderBlogCards = (blogs) => {
         if (Array.isArray(blogs) && blogs.length > 0) {
-            return blogs.map(card => {
-                const path = `/blog/${card.id}`;
+            return blogs.map(item => {
+                const path = `/blog/${item.card.id}`;
+                console.log(path)
                 return (
-                    <Link to={path} state={{ fromBlogIndex: true }}>
-                        <BlogCard data={card}></BlogCard>
-                    </Link>
+                    <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+                        <Link to={path} state={{ fromBlogIndex: true }}>
+                            <BlogCard data={item.card}></BlogCard>
+                        </Link>
+                    </div>
                 )
             });
         }

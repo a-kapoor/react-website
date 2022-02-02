@@ -5,17 +5,17 @@ export default function Footer() {
 				<ul class="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
 					<li class="my-2">
 						<a class="text-gray-400 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-							FAQ
+						Github
                 </a>
 					</li>
 					<li class="my-2">
 						<a class="text-gray-400 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-							Github
+						LinkedIn
                 </a>
 					</li>
 					<li class="my-2">
 						<a class="text-gray-400 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-							LinkedIn
+							Contact Me
                 </a>
 					</li>
 				</ul>
@@ -33,7 +33,7 @@ export default function Footer() {
 						</svg>
 					</a>
 				</div> */}
-				<div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
+				{/* <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
 					<form class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
 						<div class=" relative ">
 							<input type="text" id="&quot;form-subscribe-Subscribe" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
@@ -42,12 +42,18 @@ export default function Footer() {
 							Get In Touch
                     </button>
 					</form>
-				</div>
+				</div> */}
 				<div class="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
-					<p>Created using&nbsp;
+					<p>Powered by&nbsp;
 						<a href="https://tailwindcss.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">tailwindcss</a>
-						&nbsp;and&nbsp;
+						,&nbsp;
 						<a href="https://reactjs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">reactjs</a>
+						,&nbsp;
+						<a href="https://nodejs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">nodejs</a>
+						,&nbsp;
+						<a href="https://www.mongodb.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">mongodb</a>
+						&nbsp;and&nbsp;
+						<a href="https://www.docker.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">docker</a>
 					</p>
 				</div>
 			</div>
