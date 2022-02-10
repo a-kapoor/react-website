@@ -46,6 +46,6 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "4.3.0",
-    "postcss-cli": "9.0.2"
+    "postcss-cli": "9.0.0"
   }
 }

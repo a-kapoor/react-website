@@ -15,7 +15,7 @@ export default function Work() {
 					<dl class="w-full md:w-2/3">
 						<dt class="mb-4">
 							<h3 class="text-xl font-semibold">
-								What were my roles and responsibilityes?
+								What were my roles and responsibilities?
 							</h3>
 						</dt>
 						<dd class="">
@@ -38,7 +38,7 @@ export default function Work() {
 					<dl class="w-full md:w-2/3">
 						<dt class="mb-4">
 							<h3 class="text-xl font-semibold">
-								What were my roles and responsibilityes?
+								What were my roles and responsibilities?
 							</h3>
 						</dt>
 						<dd class="">
