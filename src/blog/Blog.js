@@ -11,7 +11,6 @@ import React, { useState } from 'react';
 import { StackContext } from '../StackContext';
 
 export default function Blog() {
-    console.log('Blog function')
     return (
         <div>
             <Outlet />
