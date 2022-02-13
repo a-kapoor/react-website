@@ -43,18 +43,24 @@ export default function Footer() {
                     </button>
 					</form>
 				</div> */}
+				
 				<div class="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
-					<p>Powered by&nbsp;
-						<a href="https://tailwindcss.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">tailwindcss</a>
-						,&nbsp;
-						<a href="https://reactjs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">reactjs</a>
-						,&nbsp;
-						<a href="https://nodejs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">nodejs</a>
-						,&nbsp;
-						<a href="https://www.mongodb.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">mongodb</a>
-						&nbsp;and&nbsp;
-						<a href="https://www.docker.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">docker</a>
-					</p>
+					<div>
+						<a href="https://www.digitalocean.com/?refcode=1588313e99f1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
+					</div>
+					<div>
+						<p>Powered by&nbsp;
+							<a href="https://tailwindcss.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">tailwindcss</a>
+							,&nbsp;
+							<a href="https://reactjs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">reactjs</a>
+							,&nbsp;
+							<a href="https://nodejs.org/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">nodejs</a>
+							,&nbsp;
+							<a href="https://www.mongodb.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">mongodb</a>
+							&nbsp;and&nbsp;
+							<a href="https://www.docker.com/" target="_blank" class="font-medium text-gray-900 hover:text-gray-500 transition-colors duration-150">docker</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>
