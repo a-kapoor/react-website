@@ -100,7 +100,7 @@ export default function Work() {
 							</div>
 						</div>
 						<h3 class="text-2xl sm:text-xl text-gray-700 font-semibold dark:text-white py-4">
-							Muncher
+							JoyfulMunch
 						</h3>
 						<p class="text-md  text-gray-500 dark:text-gray-300 py-4">
 							A web application to track eathing patterns and common symptoms for simplified health analysis
