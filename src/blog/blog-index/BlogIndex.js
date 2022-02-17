@@ -1,17 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import {
-    Routes,
-    Route,
     Link
 } from "react-router-dom";
 import BlogCard from '../blog-card/BlogCard';
 import { StackContext } from '../../StackContext';
 
 export default function BlogIndex() {
-    let location = useLocation();
     const [blogs, setBlogs] = useState([]);
-    // let blogs = [];
 
     const baseUrl = (process.env.NODE_ENV === 'production') ? process.env.REACT_APP_BASE_API_SERVER :
         process.env.REACT_APP_BASE_API_LOCAL;
@@ -27,6 +22,7 @@ export default function BlogIndex() {
                     throw new Error(error);
                 }
             )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     React.useContext(StackContext).stack = [];

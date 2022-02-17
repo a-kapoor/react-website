@@ -1,5 +1,3 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
-
 export default function BlogCard(props) {
 
     const baseUrl = (process.env.NODE_ENV === 'production') ? process.env.REACT_APP_BASE_API_SERVER :
@@ -23,11 +21,8 @@ export default function BlogCard(props) {
 
     return (
         <div class="w-full block h-full">
-            <img alt="blog photo" src={getCardHeaderImgSrc(props.data.image)} class="max-h-40 w-full object-cover" />
+            <img alt={props.data.title} src={getCardHeaderImgSrc(props.data.image)} class="max-h-40 w-full object-cover" />
             <div class="bg-white dark:bg-gray-800 w-full p-4">
-                {/* <p class="text-indigo-500 text-xl font-medium">
-                    {props.data.title}
-                </p> */}
                 <p class="text-gray-800 dark:text-white text-xl font-medium mb-2">
                     {props.data.title}
                 </p>

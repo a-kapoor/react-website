@@ -1,0 +1,73 @@
+# Using MERN (Mongodb, Express, React, Nodejs) stack to develop a website from scratch
+
+Now that Ive published the first working version of this website, I want to take some time to go over how it all came together. 
+After all writing these articles things Im building was the initialy motivation to start this website.
+
+I choose the MERN (Mongodb, Express, React, Nodejs) stack because I wanted to learn all those technologies involved.  Here is a breakdown of how 
+I tacked this project:
+**1)** Develop the skeleton React app locally
+**2)** Develop Nodejs APIs locally using static data
+**3)** Configure Mongodb locally and make Node app connect to the database
+**4)** Configure docker to run the react app, node app and mongo database into individual conatainers locally
+**5)** Use docker-compose to run all images together locally
+**6)** Finally, use digitalocean to deploy the code on server and use docker-compose to build the images
+
+
+## Part 1: Creating the React app
+The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
+At a high level the react app is structured as follows: 
+
+```
+- nginx 
+- public
+- build
+- src
+   - home
+   - about
+   - breadcrumb
+   - my-code-block
+   - side-menu
+   - work
+   - blog
+       - blog-card
+       - blog-index
+       - blog-item
+   - footer
+```
+
+The starting point of the react app is in **index.js** where the App component is called.
+```js
+ReactDOM.render(
+    <Router> 
+        <StackContext.Provider value={state}>
+            <App />
+        </StackContext.Provider>
+    </Router>,
+    document.getElementById(root)
+)
+```
+
+**App.js** contains the skeleton structure of the app. The Header and Footer components, and 
+ and all the routes definition.
+
+```js
+return (
+    <main class=dark:bg-gray-800 font-mono bg-white relative h-screen>
+        <Header />
+        <Routes>
+            <Route path=/ element={<Home />} />
+            <Route path=/about element={<About />} />
+            <Route path=/work element={<Work />} />
+            <Route path=/blog element={<Blog />}>
+                <Route index=true element={<BlogIndex />} />
+                <Route path=:blogId element={<BlogItem />} />
+            </Route>
+        </Routes>
+        <Footer />
+    </main>
+)
+```
+
+**Part 2: Creating the Nodejs App**. 
+The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
+At a high level the react app is structured as follows: 
