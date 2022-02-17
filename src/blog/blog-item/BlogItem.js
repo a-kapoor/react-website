@@ -43,7 +43,7 @@ export default function BlogItem() {
                                     return <p className="pb-7" {...props} />
                                 },
                                 h1: ({node, ...props}) => {
-                                    return <h1 className="text-3xl my-6 text-center dark:text-white" {...props} />
+                                    return <h1 className="text-3xl my-6 dark:text-white" {...props} />
                                 },
                                 h2: ({node, ...props}) => <h1 className="text-1xl my-2 dark:text-white" {...props} />
                               }}/>

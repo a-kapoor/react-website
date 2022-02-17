@@ -18,7 +18,7 @@ I tacked this project:
 
 **6)** Finally, use digitalocean to deploy the code on server and use docker-compose to build the images
 
-**Part 1: Creating the React app**
+# Part 1: Creating the React app
 
 The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
 At a high level the react app is structured as follows: 
@@ -55,7 +55,7 @@ ReactDOM.render(
 ```
 
 **App.js** contains the skeleton structure of the app. The Header and Footer components, and 
- and all the routes definition.
+ and all the routes definition. The following piece of code shows that.
 
 ```js
 return (
@@ -74,8 +74,55 @@ return (
     </main>
 )
 ```
+**Home, About, Work, Footer** are simple React components that paint a specific piece of HTML content. Blog component containts sub routes that reveal all blog
+posts, and route to a specific blog item.
 
-**Part 2: Creating the Nodejs App**. 
+```js
+// Landing component when user routes to /blog endpoint
+<Route index="true" element={<BlogIndex />} />
+
+// Component that loads when user lands on /blog/1 endpoint
+<Route path=":blogId" element={<BlogItem />} />
+```
+
+Inside **BlogIndex** component, we call the **/api/blogs** API to fetch all the blog posts. This API returns the metadata regarding a blog item, such as it's title, subtitle, header image
+and such.
+
+```js
+React.useEffect(() => {
+    fetch(`${baseUrl}/api/blogs`)
+        .then(res => res.json())
+        .then(
+            (result) => {
+                setBlogs(result);
+            },
+            (error) => {
+                throw new Error(error);
+            }
+        )
+}, []);
+```
+
+Once a user clicks a blog post item, we redirect to the **BlogItem** component that loads the content for that blog. I've used ReactMarkdown library 
+that helps me read the content from a text file/ string format. I've enhanced the base components as below to update their css style.
+
+```js
+<ReactMarkdown children={markdown}
+    remarkPlugins={[remarkGfm]}
+    rehypePlugins={[rehypeHighlight, rehypeRaw]}
+    // format the style for the following elements
+    components={{
+        pre: ({node, ...props}) => <pre className="mb-7 px-7 py-7 bg-gray-100 rounded-md" {...props} />,
+        p: ({node, ...props}) => {
+            return <p className="pb-7" {...props} />
+        },
+        h1: ({node, ...props}) => {
+            return <h1 className="text-3xl my-6 text-center dark:text-white" {...props} />
+        },
+        h2: ({node, ...props}) => <h1 className="text-1xl my-2 dark:text-white" {...props} />
+}}/>
+```
+# Part 2: Creating the Nodejs App
 
 The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
 At a high level the react app is structured as follows: 
