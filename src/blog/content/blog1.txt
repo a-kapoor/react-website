@@ -5,15 +5,21 @@ After all writing these articles things Im building was the initialy motivation 
 
 I choose the MERN (Mongodb, Express, React, Nodejs) stack because I wanted to learn all those technologies involved.  Here is a breakdown of how 
 I tacked this project:
+
 **1)** Develop the skeleton React app locally
+
 **2)** Develop Nodejs APIs locally using static data
+
 **3)** Configure Mongodb locally and make Node app connect to the database
+
 **4)** Configure docker to run the react app, node app and mongo database into individual conatainers locally
+
 **5)** Use docker-compose to run all images together locally
+
 **6)** Finally, use digitalocean to deploy the code on server and use docker-compose to build the images
 
+**Part 1: Creating the React app**
 
-## Part 1: Creating the React app
 The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
 At a high level the react app is structured as follows: 
 
@@ -36,6 +42,7 @@ At a high level the react app is structured as follows:
 ```
 
 The starting point of the react app is in **index.js** where the App component is called.
+
 ```js
 ReactDOM.render(
     <Router> 
@@ -69,5 +76,6 @@ return (
 ```
 
 **Part 2: Creating the Nodejs App**. 
+
 The source code for the React app can be found at this **[Github repo](https://github.com/codewithkaps/react-website)**. 
 At a high level the react app is structured as follows: 
